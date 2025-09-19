@@ -1,0 +1,273 @@
+/* General Body and Container Styling */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+.app-advanced {
+  background: linear-gradient(135deg, #e3f2fd 0%, #c5cae9 100%);
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Header and Account Info */
+.header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2.5em;
+  color: #3f51b5;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.account-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 15px;
+  font-size: 1em;
+  color: #555;
+}
+
+.account-info span strong {
+  color: #333;
+}
+
+.status-voted {
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+.status-can-vote {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+/* Candidate Section */
+.candidate-title {
+  font-size: 1.8em;
+  color: #3f51b5;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  border-bottom: 2px solid #c5cae9;
+  padding-bottom: 5px;
+}
+
+.candidate-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 600px;
+  width: 100%;
+}
+
+.candidate-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 16px;
+  padding: 18px 25px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.candidate-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.candidate-name {
+  font-weight: 600;
+  color: #333;
+  font-size: 1.1em;
+}
+
+.candidate-votes {
+  color: #6a0dad; /* A distinct color for votes */
+  font-weight: 600;
+  margin-right: 20px;
+  font-size: 1.1em;
+}
+
+.vote-btn {
+  background-color: #3f51b5;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 25px;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.vote-btn:hover:enabled {
+  background-color: #303f9f;
+  transform: translateY(-2px);
+}
+
+.vote-btn:disabled {
+  background-color: #b0bec5;
+  color: #78909c;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Loader Styling */
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3f51b5;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 600px) {
+  .app-advanced {
+    padding: 20px 10px;
+  }
+  .header h1 {
+    font-size: 1.8em;
+  }
+  .account-info {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+/* Add this to your existing App.css file */
+.admin-controls {
+    background: #e8f0fe;
+    border: 1px solid #c5d7f6;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.admin-controls h3 {
+    margin: 0;
+    color: #3f51b5;
+    font-size: 1.4em;
+}
+
+.admin-controls .vote-btn {
+    margin: 0 5px;
+}
+
+.admin-controls .vote-btn:disabled {
+    opacity: 0.6;
+}
+
+.register-section {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.address-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+.address-input::placeholder {
+    color: #aaa;
+}
+/* Add to your existing App.css file */
+
+.results-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.result-item {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 18px 25px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.result-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.candidate-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.candidate-info .candidate-name {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.vote-count {
+  font-weight: 600;
+  color: #6a0dad;
+}
+
+.bar-container {
+  height: 25px;
+  background-color: #e0e7ff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.bar {
+  height: 100%;
+  background: linear-gradient(90deg, #6366f1, #818cf8);
+  border-radius: 8px;
+  transition: width 0.5s ease-in-out;
+}
+
+.percentage-label {
+  font-weight: bold;
+  color: #3f51b5;
+  margin-top: 8px;
+  text-align: right;
+  display: block;
+}
